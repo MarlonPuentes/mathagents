@@ -1,0 +1,15 @@
+# Versiones probadas en el entorno de desarrollo (27 sep 2026). RNF-2: no subir de versión mayor sin volver a probar.
+langgraph>=1.2,<1.3
+jsonschema>=4.23,<5
+numpy>=2,<3
+scipy>=1.14,<2
+PyYAML>=6,<7
+faiss-cpu>=1.9,<2
+pytest>=8,<10
+# Proveedores de LLM (instala el que uses)
+openai>=1.50
+anthropic>=0.40
+# Embeddings reales (descarga PyTorch CPU, ~200 MB; necesario para el índice definitivo)
+sentence-transformers>=3,<7
+# Demo
+gradio>=5,<7

@@ -1,0 +1,16 @@
+__pycache__/
+*.pyc
+.env
+venv/
+.venv/
+logs/*.jsonl
+lean_project/.lake/
+lean_project/.verify_tmp/
+retrieval/index/
+retrieval/mathlib_decls.jsonl
+.pytest_cache/
+
+# macOS
+.DS_Store
+# Informe académico: se publica después de la entrega del curso
+docs/informe/

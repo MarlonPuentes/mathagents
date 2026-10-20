@@ -1,0 +1,17 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Multi-agent generative AI system for complex problem solving with reasoning chains and formal theorem verification"
+authors:
+  - family-names: "Puentes Guzmán"
+    given-names: "Marlon Janpierre"
+    email: "marlon.puentes@uptc.edu.co"
+    affiliation: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+  - family-names: "Muñoz Eslava"
+    given-names: "Juan David"
+    email: "juan.munoz16@uptc.edu.co"
+    affiliation: "Universidad Pedagógica y Tecnológica de Colombia (UPTC)"
+version: 0.1.0
+date-released: 2026-12-01
+license: Apache-2.0
+repository-code: "https://huggingface.co/USUARIO/mathagents"
+keywords: [multi-agent systems, LLM, Lean 4, Mathlib, RAG, formal verification]

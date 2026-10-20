@@ -1,0 +1,12 @@
+# Proyecto Lean que usa el Verificador.
+# Versión de Mathlib FIJADA (RNF-2: reproducibilidad). Cambiar solo a propósito.
+name = "MathAgentsLean"
+defaultTargets = ["MathAgentsLean"]
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4.git"
+rev = "v4.34.1"
+
+[[lean_lib]]
+name = "MathAgentsLean"

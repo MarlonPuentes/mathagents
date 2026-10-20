@@ -1,0 +1,50 @@
+# =====================================================================
+# Configuración central del sistema multiagente (un solo lugar para todo)
+# RNF-2: todo lo que afecta el resultado de un experimento está aquí
+# y se copia al "manifiesto" al inicio de cada log.
+# =====================================================================
+
+seed: 42
+
+llm:
+  # Opciones: mock | openai_compatible | anthropic | claude_cli (experimental)
+  provider: mock
+  model: "mock-model"
+  temperature: 0.0          # RNF-2: se registra en cada corrida
+  max_tokens: 2048
+  # Solo para openai_compatible (Gemini, Groq, OpenRouter, DeepSeek, Ollama...)
+  base_url: null            # ej. "https://generativelanguage.googleapis.com/v1beta/openai/"
+  api_key_env: "LLM_API_KEY"  # nombre de la variable de entorno con la clave
+  max_retries: 3            # reintentos ante errores de red / límite de uso
+  request_timeout_s: 120
+
+lean:
+  project_dir: "lean_project"
+  # En tu PC con Mathlib completo: ["Mathlib"]
+  imports: ["Mathlib"]
+  opens: ["BigOperators", "Real", "Nat", "Topology"]
+  timeout_s: 300
+  # Axiomas estándar aceptados. Cualquier otro (ej. sorryAx) => rechazo.
+  allowed_axioms: ["propext", "Classical.choice", "Quot.sound"]
+
+retrieval:
+  # Opciones: hashing (sin descargas, para pruebas) | sentence_transformers
+  embedder: sentence_transformers
+  model_name: "BAAI/bge-small-en-v1.5"
+  model_revision: "main"     # fija un commit concreto antes de los experimentos
+  index_dir: "retrieval/index"
+  top_k: 8
+
+agents:
+  max_subgoals: 3            # sin contar el teorema final
+  generator_samples: 1       # >1 activa self-consistency (más llamadas LLM)
+  critic_uses_llm: true
+
+orchestrator:
+  k_max: 3                   # reintentos por subobjetivo (PDF: 3 a 5)
+  max_replans: 1
+  llm_call_budget: 20        # tope por problema (RNF-3)
+
+paths:
+  logs_dir: "logs"
+  results_dir: "results"

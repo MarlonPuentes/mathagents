@@ -1,0 +1,8 @@
+{"query": "the square of a sum: (a + b)^2 equals a^2 + 2ab + b^2", "expected": "add_sq"}
+{"query": "twice a number equals the number added to itself, 2 * n = n + n", "expected": "two_mul"}
+{"query": "a square is always nonnegative, 0 ≤ a ^ 2", "expected": "sq_nonneg"}
+{"query": "the product of two positive numbers is positive, 0 < a → 0 < b → 0 < a * b", "expected": "mul_pos"}
+{"query": "addition is commutative, a + b = b + a", "expected": "add_comm"}
+{"query": "multiplication is commutative, a * b = b * a", "expected": "mul_comm"}
+{"query": "transitivity: a < b and b ≤ c imply a < c", "expected": "lt_of_lt_of_le"}
+{"query": "absolute value is nonnegative, 0 ≤ |a|", "expected": "abs_nonneg"}
