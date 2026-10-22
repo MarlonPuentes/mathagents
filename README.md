@@ -1,9 +1,3 @@
----
-license: apache-2.0
-language: [en, es]
-tags: [multi-agent, lean4, mathlib, theorem-proving, rag, langgraph]
----
-
 # MathAgents: sistema multiagente con verificación formal en Lean 4
 
 Proyecto final del curso de Inteligencia Artificial (UPTC Sogamoso). Varios agentes basados en un LLM
